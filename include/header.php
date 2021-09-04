@@ -9,5 +9,8 @@
 <!-- Custom styles for this template -->
 <link href="./css/style.css" rel="stylesheet">
 
+<!-- favicon -->
+<link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+
 <!-- title tag -->
 <title>NBoT <?php //echo(basename($_SERVER['PHP_SELF'])) ?> </title>
