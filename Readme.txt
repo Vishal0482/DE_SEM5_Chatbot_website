@@ -32,6 +32,7 @@ logo.jpg
 logo2.jpg
 logo.png --with alpha
 prifile.png
+favicon.ico
 
 >html
 index.html
