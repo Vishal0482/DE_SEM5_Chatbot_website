@@ -1,161 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <?php include 'include/header.php';?>
-</head>
-<body>
 
-    <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">Company name</a>
-        <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="navbar-nav">
-          <div class="nav-item text-nowrap">
-            <a class="nav-link px-3" href="#">Sign out</a>
-          </div>
-        </div>
-      </header>
-    <div class="container-fluid">
-        <div class="row">
-          <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
-            <div class="position-sticky pt-3">
-              <ul class="nav flex-column">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">
-                    <span data-feather="home"></span>
-                    Dashboard
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">
-                    <span data-feather="shopping-cart"></span>
-                    Products
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">
-                    <span data-feather="bar-chart-2"></span>
-                    Reports
-                  </a>
-                </li>
-              </ul>
-      
-              <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-                <span>Saved reports</span>
-                <a class="link-secondary" href="#" aria-label="Add a new report">
-                  <span data-feather="plus-circle"></span>
-                </a>
-              </h6>
-              <ul class="nav flex-column mb-2">
-                <li class="nav-item">
-                  <a class="nav-link" href="#">
-                    <span data-feather="file-text"></span>
-                    Current month
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">
-                    <span data-feather="file-text"></span>
-                    Last quarter
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">
-                    <span data-feather="file-text"></span>
-                    Social engagement
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">
-                    <span data-feather="file-text"></span>
-                    Year-end sale
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </nav>
-      
-          <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-              <h1 class="h2">Dashboard</h1>
-              <div class="btn-toolbar mb-2 mb-md-0">
-                <div class="btn-group me-2">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
-                </div>
-                <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
-                  <span data-feather="calendar"></span>
-                  This week
-                </button>
-              </div>
-            </div>
-      
-            <h2>Section title</h2>
-            <div class="table-responsive">
-              <table class="table table-striped table-sm">
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Header</th>
-                    <th scope="col">Header</th>
-                    <th scope="col">Header</th>
-                    <th scope="col">Header</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1,001</td>
-                    <td>random</td>
-                    <td>data</td>
-                    <td>placeholder</td>
-                    <td>text</td>
-                  </tr>
-                  <tr>
-                    <td>1,002</td>
-                    <td>placeholder</td>
-                    <td>irrelevant</td>
-                    <td>visual</td>
-                    <td>layout</td>
-                  </tr>
-                  <tr>
-                    <td>1,003</td>
-                    <td>data</td>
-                    <td>rich</td>
-                    <td>dashboard</td>
-                    <td>tabular</td>
-                  </tr>
-                  <tr>
-                    <td>1,003</td>
-                    <td>information</td>
-                    <td>placeholder</td>
-                    <td>illustrative</td>
-                    <td>data</td>
-                  </tr>
-                  <tr>
-                    <td>1,004</td>
-                    <td>text</td>
-                    <td>random</td>
-                    <td>layout</td>
-                    <td>dashboard</td>
-                  </tr>
-                  <tr>
-                    <td>1,005</td>
-                    <td>dashboard</td>
-                    <td>irrelevant</td>
-                    <td>text</td>
-                    <td>placeholder</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </main>
+<head>
+  <?php include 'include/header.php'; ?>
+</head>
+
+<body>
+  <header class="navbar navbar-light sticky-top bg-light flex-md-nowrap p-0 shadow" id="navbar">
+    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">Company Name</a>
+    <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-nav">
+      <div class="nav-item text-nowrap">
+        <img src="./img/profile.png" alt="logo" class="navbar-logo mx-3 my-2 border border-primary">
+      </div>
+    </div>
+  </header>
+  <div class="container-fluid my-3">
+    <div class="row">
+      <div class="col-4">
+        <div class="list-group" id="list-tab" role="tablist">
+          <a class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="list" href="#list-home" role="tab" aria-controls="list-home">Home</a>
+          <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="list-profile">Profile</a>
+          <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="list" href="#list-messages" role="tab" aria-controls="list-messages">Messages</a>
+          <a class="list-group-item list-group-item-action" id="list-settings-list" data-bs-toggle="list" href="#list-settings" role="tab" aria-controls="list-settings">Settings</a>
         </div>
       </div>
+      <div class="col-8">
+        <div class="tab-content" id="nav-tabContent">
+          <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+            <h3>Home</h3>
+            <hr>
+          </div>
+          <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+            <h3>Profile</h3>
+            <hr>
+            <ul class="list-group list-group-flush rounded" id="details">
+              <li class="list-group-item" id="dark1">Company Name: <span id="displayName"></span></li>
+              <li class="list-group-item" id="dark2">Email: <span id="displayEmail"></span></li>
+              <li class="list-group-item" id="dark3">A third item</li>
+              <li class="list-group-item" id="dark4">A fourth item</li>
+              <div id="changeDetail">
+                
+                <button type="button" class="btn btn-primary my-4" onclick="changeDetail()">Change Detail</button>
+              </div>
+            </ul>
+
+            <div id="form">
+              <div class="mb-3">
+                <label for="companyName" class="form-label">Comapny Name</label>
+                <input type="text" class="form-control" id="companyName" placeholder="Enter company name">
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email">
+              </div>
+              <button type="button" class="btn btn-primary" onclick="saveChanges()">Save Change</button>
+              <button type="button" class="btn btn-primary mx-3" onclick="cancle()">cancle</button>
+            </div>
+
+          </div>
+          <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
+            <h3>Messages</h3>
+            <hr>
+            <div class="container boarder rounded">
+                Renew your plan to continue our services.
+            </div>
+            <div class="container boarder rounded">
+                Your current Plan expire next week.
+            </div>
+          </div>
+          <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
+            <h3>Settings</h3>
+            <hr>
+            <h4>Appearance</h4>
+            <h5>Themes</h5>
+
+            <div class="form-check">
+              <input type="radio" name="radios" onclick="check()" class="form-check-input" id="radioLight">
+              <label class="form-check-label" for="exampleRadio1">Light</label>
+            </div>
+
+            <div class="mb-3 form-check">
+              <input type="radio" name="radios" onclick="check()" class="form-check-input" id="radioDark">
+              <label class="form-check-label" for="exampleRadio2">Dark</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
-
-      <?php include 'include/script.php';?>
-
+  <?php include 'include/script.php'; ?>
+  <script src="./script/dashboard.js"></script>
 </body>
+
 </html>
