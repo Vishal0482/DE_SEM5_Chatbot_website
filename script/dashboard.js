@@ -14,10 +14,13 @@ function cancle() {
 
 function updateDetail() {
     document.getElementById('displayName').innerHTML = localStorage.getItem("inputName");
+    let text = "set company name";
     if(localStorage.getItem("inputName") == null){
-        document.getElementById('displayCompanyName').innerHTML = "E-commerce store";
+        document.getElementById('displayCompanyName').innerHTML = text;
     }
-    document.getElementById('displayCompanyName').innerHTML = localStorage.getItem("inputName");
+    else{
+        document.getElementById('displayCompanyName').innerHTML = localStorage.getItem("inputName");
+    }
     document.getElementById('displayEmail').innerHTML = localStorage.getItem("inputEmail");
 }
 
@@ -36,8 +39,6 @@ function saveChanges() {
     alert("Details saved")
     updateDetail()
 }
-
-
 
 // theme changing
 

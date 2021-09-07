@@ -8,9 +8,9 @@
 <body>
   <header class="navbar navbar-light sticky-top bg-light flex-md-nowrap p-0 shadow" id="navbar">
     <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#"><span id="displayCompanyName"></span></a>
-    <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+    <!-- <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
-    </button>
+    </button> -->
     <div class="navbar-nav">
       <div class="nav-item text-nowrap">
         <img src="./img/profile.png" alt="logo" class="navbar-logo mx-3 my-2 border border-primary">
@@ -55,19 +55,19 @@
               <div class="mb-3">
                 <label for="email" class="form-label">Email Address</label>
                 <input type="email" class="form-control" id="email" placeholder="Enter email">
-              </div>
+              </div> 
               <button type="button" class="btn btn-primary" onclick="saveChanges()">Save Change</button>
-              <button type="button" class="btn btn-primary mx-3" onclick="cancle()">cancle</button>
+              <button type="button" class="btn btn-primary mx-3" onclick="cancle()" id="cancle">cancle</button>
             </div>
 
           </div>
           <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
             <h3>Messages</h3>
             <hr>
-            <div class="container boarder rounded">
+            <div class="container boarder rounded bg-primary p-3 my-2">
                 Renew your plan to continue our services.
             </div>
-            <div class="container boarder rounded">
+            <div class="container boarder rounded bg-primary p-3 my-2">
                 Your current Plan expire next week.
             </div>
           </div>
