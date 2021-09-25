@@ -9,10 +9,10 @@
 
              <div class="col-md-2">
                  <nav class="nav flex-column">
-                     <a class="nav-item nav-link py-2 color-2" href="pricing.html" style="font-weight: 400;">Pricing</a>
-                     <a class="nav-item nav-link py-2 color-2" href="services.html"
+                     <a class="nav-item nav-link py-2 color-2" href="/Chatbot_site/pricing.php" style="font-weight: 400;">Pricing</a>
+                     <a class="nav-item nav-link py-2 color-2" href="/Chatbot_site/service.php"
                          style="font-weight: 400;">Services</a>
-                     <a class="nav-item nav-link py-2 color-2" href="about.html" style="font-weight: 400;">About</a>
+                     <a class="nav-item nav-link py-2 color-2" href="/Chatbot_site/about.php" style="font-weight: 400;">About</a>
                  </nav>
              </div>
 
