@@ -7,11 +7,9 @@
     <?php include 'include/nav.php';?>
 
 
-    <div class="h-100 p-5 mb-5 text-white bg-dark rounded-3 text-center">
+    <div class="h-100 p-5 mb-5 text-white bg-dark rounded-bottom text-center">
         <h2 class="display-4 fw-normal">Pricing</h2>
-        <p class="fs-5 text-muted">Quickly build an effective pricing table for your potential customers with
-            this Bootstrap example. It’s built with default Bootstrap components and utilities with little
-            customization.</p>
+        <p class="fs-5 fonts">Quickly start with our free plan.</p>
     </div>
     <div class="container py-3">
 

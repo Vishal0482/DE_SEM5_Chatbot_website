@@ -1,5 +1,4 @@
 // Profile detail manupulation
-
 document.getElementById("form").style.visibility = "hidden";
 
 function changeDetail() {
@@ -22,6 +21,8 @@ function updateDetail() {
         document.getElementById('displayCompanyName').innerHTML = localStorage.getItem("inputName");
     }
     document.getElementById('displayEmail').innerHTML = localStorage.getItem("inputEmail");
+    document.getElementById('displayUsername').innerHTML = localStorage.getItem("inputUsername");
+    document.getElementById('displayRole').innerHTML = localStorage.getItem("inputRole");
 }
 
 updateDetail()
@@ -35,6 +36,12 @@ function saveChanges() {
 
     let inputEmail = document.getElementById('email').value;
     localStorage.setItem("inputEmail", inputEmail);
+
+    let inputUsername = document.getElementById('username').value;
+    localStorage.setItem("inputUsername", inputUsername);
+
+    let inputRole = document.getElementById('role').value;
+    localStorage.setItem("inputRole", inputRole);
 
     alert("Details saved")
     updateDetail()
@@ -63,6 +70,12 @@ function check() {
         document.getElementById("list-messages-list").classList.add("text-white");
         document.getElementById("list-settings-list").classList.add("bg-dark");
         document.getElementById("list-settings-list").classList.add("text-white");
+        document.getElementById("card-theme").classList.add("bg-dark");
+        document.getElementById("card-theme").classList.add("text-white");
+        document.getElementById("card-li1-theme").classList.add("bg-dark");
+        document.getElementById("card-li1-theme").classList.add("text-white");
+        document.getElementById("card-li2-theme").classList.add("bg-dark");
+        document.getElementById("card-li2-theme").classList.add("text-white");
 
         // profile details
         document.getElementById("dark1").classList.add("bg-dark");
@@ -96,6 +109,12 @@ function check() {
         document.getElementById("list-messages-list").classList.remove("text-white");
         document.getElementById("list-settings-list").classList.remove("bg-dark");
         document.getElementById("list-settings-list").classList.remove("text-white");
+         document.getElementById("card-theme").classList.remove("bg-dark");
+        document.getElementById("card-theme").classList.remove("text-white");
+        document.getElementById("card-li1-theme").classList.remove("bg-dark");
+        document.getElementById("card-li1-theme").classList.remove("text-white");
+        document.getElementById("card-li2-theme").classList.remove("bg-dark");
+        document.getElementById("card-li2-theme").classList.remove("text-white");
 
         // profile details
         document.getElementById("dark1").classList.remove("bg-dark");

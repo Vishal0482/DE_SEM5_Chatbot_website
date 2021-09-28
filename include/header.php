@@ -12,5 +12,12 @@
 <!-- favicon -->
 <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
 
+<!-- google fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<!-- Fonts Awesome(Icons) -->
+<script src="https://kit.fontawesome.com/d04471fc33.js" crossorigin="anonymous"></script>
+
+
 <!-- title tag -->
 <title>NBoT <?php //echo(basename($_SERVER['PHP_SELF'])) ?> </title>

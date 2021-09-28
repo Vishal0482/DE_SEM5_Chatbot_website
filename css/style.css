@@ -12,6 +12,18 @@
     }
   } */
 
+.fonts{
+  font-family: 'Work Sans', sans-serif;
+}
+
+.chat-img{
+  height: 400px;
+}
+
+.paragraph-text{
+  font-size: 1.1rem;
+}
+
 .navbar-logo{
   height: 40px;
   border-radius: 50%;
