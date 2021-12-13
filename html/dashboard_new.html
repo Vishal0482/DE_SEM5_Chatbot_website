@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+
+    <link rel="stylesheet" href="../bootstrap-5.1.0-dist/css/bootstrap.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Custom styles for this template -->
+
+    <link rel="stylesheet" href="../css/style_new.css">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+
+    <!-- title tag -->
+    <title>
+        User dashboard
+    </title>
+    <style>
+        label {
+            font-weight: 600;
+            font-size: 1.2em;
+        }
+
+        span {
+            font-size: 1.1em;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <main>
+
+        <header class="container-fluid bg-dark">
+            <div class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow container" id="navbar">
+                <h1>
+                    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">Company Name</a>
+                </h1>
+                <button class="navbar-toggler position-absolute d-md-none collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-nav">
+                    <div class="nav-item text-nowrap">
+                        <!-- <img src="./img/profile.png" alt="logo"
+                            class=""> -->
+                        <i class="bx bxs-bell navbar-logo border border-light"></i>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-4">
+                    <div class="list-group" id="list-tab" role="tablist">
+                        <a class="list-group-item list-group-item-action active" id="list-home-list"
+                            data-bs-toggle="list" href="#list-home" role="tab" aria-controls="list-home">Home</a>
+                        <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list"
+                            href="#list-profile" role="tab" aria-controls="list-profile">Profile</a>
+                        <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="list"
+                            href="#list-messages" role="tab" aria-controls="list-messages">Messages</a>
+                        <a class="list-group-item list-group-item-action" id="list-settings-list" data-bs-toggle="list"
+                            href="#list-settings" role="tab" aria-controls="list-settings">Settings</a>
+                    </div>
+                </div>
+                <div class="col-8">
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="list-home" role="tabpanel"
+                            aria-labelledby="list-home-list">
+                            <h3>Home</h3>
+                            <hr>
+                            <div class="m-0 px-3 py-2 mx-2 d-inline-block home-details">
+                                <ul class="list-group list-group-flush rounded">
+                                    <li class="list-group-item" id="dark1">
+                                        <label for="">Company Name: </label>
+                                        <span id="displayName">{{ data.companyName }}
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item" id="dark2">
+                                        <label for="">Email: </label>
+                                        <span id="displayEmail">{{ data.email }} </span>
+                                    </li>
+                                    <li class="list-group-item" id="dark3">
+                                        <label for="">ProductApi Url: </label>
+
+                                        <span id="apiUrl">{{ data.dataRequestUrl }} </span>
+                                    </li>
+                                    <li class="list-group-item" id="dark4">
+                                        <label for="">Company's Api Key: </label>
+                                        <span id="apiKey">{{ data.companyApiKey }}</span>
+                                    </li>
+                                    <li class="list-group-item" id="dark5">
+                                        <label for="">Company's Website:</label>
+                                        <span id="website">{{ data.companyWebsiteUrl }}</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="w-25 mx-2 my-5 my-lg-0 d-inline-block">
+                                <img src="../img/profile.png" class="home-img" alt="">
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="list-profile" role="tabpanel"
+                            aria-labelledby="list-profile-list">
+                            <h3>Profile</h3>
+                            <hr>
+                            <ul class="list-group list-group-flush rounded" id="details">
+                                <li class="list-group-item" id="dark1">
+                                    <label for="">Company Name: </label>
+                                    <span id="displayName">{{ data.companyName }}
+                                    </span>
+                                </li>
+                                <li class="list-group-item" id="dark2">
+                                    <label for="">Email: </label>
+                                    <span id="displayEmail">{{ data.email }} </span>
+                                </li>
+                                <li class="list-group-item" id="dark3">
+                                    <label for="">ProductApi Url: </label>
+
+                                    <span id="apiUrl"> {{ data.companyWebsiteUrl }}</span>
+                                </li>
+                                <li class="list-group-item" id="dark4">
+                                    <label for="">Company's Api Key: </label>
+                                    <span id="apiKey">{{ data.companyApiKey }}</span>
+                                </li>
+                                <li class="list-group-item" id="dark5">
+                                    <label for="">Company's Website:</label>
+                                    <span id="website">{{ data.companyWebsiteUrl}} </span>
+                                </li>
+
+                                <div id="changeDetail">
+                                    <button type="button" class="btn btn-primary my-4" onclick="changeDetail()">Change
+                                        Detail</button>
+                                </div>
+                            </ul>
+
+                            <div id="form">
+                                <div class="mb-3">
+                                    <label for="companyName" class="form-label">Comapny Name</label>
+                                    <input type="text" name="companyName" class="form-control" id="companyName"
+                                        placeholder="Enter company name">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Enter email">
+                                </div>
+                                <button type="button" class="btn btn-primary" onclick="saveChanges()">Save
+                                    Change</button>
+                                <button type="button" class="btn btn-primary mx-3" onclick="cancle()">cancle</button>
+                            </div>
+
+                        </div>
+                        <div class="tab-pane fade" id="list-messages" role="tabpanel"
+                            aria-labelledby="list-messages-list">
+                            <h3>Messages</h3>
+                            <hr>
+                            <div class="alert alert-dark" role="alert">
+                                Renew your plan to continue our services.
+                                <button type="button" class="close btn btn-outline-dark" data-dismiss="alert"
+                                    aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="alert alert-dark" role="alert">
+                                Your current Plan expire next week.
+                                <button type="button" class="close btn btn-outline-dark" data-dismiss="alert"
+                                    aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="list-settings" role="tabpanel"
+                            aria-labelledby="list-settings-list">
+                            <h3>Settings</h3>
+                            <hr>
+                            <h4>Appearance</h4>
+                            <h5>Themes</h5>
+
+                            <div class="form-check">
+                                <input type="radio" name="radios" onclick="check()" class="form-check-input"
+                                    id="radioLight">
+                                <label class="form-check-label" for="exampleRadio1">Light</label>
+                            </div>
+
+                            <div class="mb-3 form-check">
+                                <input type="radio" name="radios" onclick="check()" class="form-check-input"
+                                    id="radioDark">
+                                <label class="form-check-label" for="exampleRadio2">Dark</label>
+                            </div>
+
+                            <hr>
+                            <div>
+                                <form method="post" action="{% url 'user:tokenGenerator">
+                                    <div class="mb-3">
+                                        <label for="password" class="form-label">Enter Password</label>
+                                        <input type="password" name="password" class="form-control" id="password"
+                                            placeholder="Enter password">
+                                    </div>
+                                    <input type="submit" class="btn btn-primary" value="Generate Token">
+                                </form>
+                            </div>
+
+                            <hr>
+                            <div>
+                                <a class="btn btn-primary mx-auto px-4 py-2" href="{% url 'user:signOut"> LogOut</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </main>
+
+    <!-- Footer start -->
+    <footer class="site-footer section block bg-dark">
+        <div class="container py-4">
+            <div class="row gap-y text-center text-md-left">
+
+                <div class="col-md-4">
+                    <a href="">
+                        <img src="../img/logo.png" alt="" class="logo" style="width: 15vw;">
+                    </a>
+                </div>
+
+                <div class="col-md-2">
+                    <nav class="nav flex-column">
+                        <a class="nav-item nav-link py-2 color-2" href="" style="font-weight: 400;">Pricing</a>
+                        <a class="nav-item nav-link py-2 color-2" href="" style="font-weight: 400;">Services</a>
+                        <a class="nav-item nav-link py-2 color-2" href="" style="font-weight: 400;">About</a>
+                    </nav>
+                </div>
+
+                <div class="col-md-2">
+                    <nav class="nav flex-column">
+                        <a class="nav-item nav-link py-2 color-2" href="#" style="font-weight: 400;">Contact us</a>
+                        <a class="nav-item nav-link py-2 color-2" href="#" style="font-weight: 400;">Terms of
+                            Service</a>
+                        <a class="nav-item nav-link py-2 color-2" href="#" style="font-weight: 400;">Privacy Policy</a>
+                        <a class="nav-item nav-link py-2 color-2" href="#" style="font-weight: 400;">Cookie Policy</a>
+                    </nav>
+                </div>
+
+                <div class="col-md-4 text-white">
+                    <h6 class="bold">Receive latest strategies</h6>
+                    <p class="color-2">Receive our newsletter
+                        <span class="bold">Subscribe now!</span>
+                    <div class="row">
+                        <div class="mb-3 col-sm-8">
+                            <input type="email" class="form-control" id="exampleFormControlInput1"
+                                placeholder="name@example.com">
+                        </div>
+                        <div class="mb-3 col-sm-4">
+                            <button type="button" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                    </p>
+                </div>
+            </div>
+            <hr class="mt-1 bg-light">
+
+            <div class="row align-items-center text-white">
+                <div class="col">
+                    <p class="mt-1 mb-md-0 color-2 text-center text-md-left">Copyright ©
+                        <script language="JavaScript" type="text/javascript">
+                            document.write((new Date()).getFullYear())
+                        </script>, Chatbot
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<!-- bootstap js online link -->
+<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+    integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+
+<!-- custom js -->
+<script src="../bootstrap-5.1.0-dist/js/bootstrap.min.js "></script>
+<!-- <script src="../script/script.js"></script> -->
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+-->
+<script src="../script/dashboard.js"></script>
+
+</html>
